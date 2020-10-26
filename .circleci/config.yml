@@ -5,4 +5,4 @@ jobs:
       - image: alpine:3.11
     steps:
       - checkout
-      - run: echo "hello world"
+      - run: cat /etc/issue
