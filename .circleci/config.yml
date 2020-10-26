@@ -1,8 +1,7 @@
-version: 2.1
+version: 2
 jobs:
-  build:
-    docker: 
-      - image: alpine:3.11
-    steps:
-      - checkout
-      - run: cat /etc/issue
+ build:
+   machine: true
+   steps:
+     - checkout
+     - run: docker build -t company/app:$CIRCLE_BRANCH .
